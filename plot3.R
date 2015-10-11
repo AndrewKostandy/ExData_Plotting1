@@ -19,7 +19,10 @@ plot3<-function(){
   rownames(thedata2) <- seq(length=nrow(thedata2))
   
   ## Opening png device, creating plot3.png in working directory
-  png(file="plot3.png", width = 480, height = 480, units = "px")
+  ## I set the background color to transparent since the original images are like that!
+  ## You can try saving each plot on the Coursera project page as an image on your computer
+  ## and opening it from there to confirm this
+  png(file="plot3.png", bg=NA, width = 480, height = 480, units = "px")
   
   ## Creating plot and adding the different points of the variables and sending it all to file
   plot(thedata2$Time,thedata2$Sub_metering_1,xlab="", ylab="Energy sub metering",type="l")

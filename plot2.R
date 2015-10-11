@@ -19,7 +19,10 @@ plot2<-function(){
   rownames(thedata2) <- seq(length=nrow(thedata2))
   
   ## Opening png device, creating plot2.png in working directory
-  png(file="plot2.png", width = 480, height = 480, units = "px")
+  ## I set the background color to transparent since the original images are like that!
+  ## You can try saving each plot on the Coursera project page as an image on your computer
+  ## and opening it from there to confirm this
+  png(file="plot2.png", bg=NA, width = 480, height = 480, units = "px")
   
   ## Creating plot and sending it to file
   with(thedata2,plot(Time,Global_active_power,xlab="", ylab="Global Active Power (kilowatts)",type="l"))

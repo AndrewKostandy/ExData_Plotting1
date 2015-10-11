@@ -19,7 +19,10 @@ plot4<-function(){
   rownames(thedata2) <- seq(length=nrow(thedata2))
   
   ## Opening png device, creating plot4.png in working directory
-  png(file="plot4.png", width = 480, height = 480, units = "px")
+  ## I set the background color to transparent since the original images are like that!
+  ## You can try saving each plot on the Coursera project page as an image on your computer
+  ## and opening it from there to confirm this
+  png(file="plot4.png", bg=NA, width = 480, height = 480, units = "px")
   
   ## Setting the stage for a 2 rows by 2 columns space to show 4 plots
   ## mfcol ensures the plots are drawn in the order of column by column
